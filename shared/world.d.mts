@@ -1,0 +1,20 @@
+export type Position = { x: number; y: number };
+export type Place = {
+  id: string;
+  name: string;
+  subtitle: string;
+  x: number;
+  y: number;
+  kind: string;
+  panel: string;
+  rect: number[];
+};
+export const TILE: number;
+export const WIDTH: number;
+export const HEIGHT: number;
+export const SPAWN: Position;
+export const POINTS: Place[];
+export function walkable(x: number, y: number): boolean;
+export function waterAt(x: number, y: number): boolean;
+export function route(from: Position, to: Position): Position[];
+export function nearPoint(position: Position): Place | null;
